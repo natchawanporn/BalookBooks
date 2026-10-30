@@ -1,0 +1,2750 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root {
+    --blue: #58c4d8;
+    --blue-dark: #159db5;
+    --blue-light: #e8f9fc;
+
+    --pink: #e8b9dd;
+    --pink-light: #f7e7f3;
+
+    --purple: #dcd5ed;
+
+    --cream: #fff9e9;
+
+    --dark: #26383d;
+    --line: #8bbac3;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Noto Sans Thai",
+        sans-serif;
+
+    color: var(--dark);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7faff,
+            #ffffff 50%,
+            #fff2fa
+        );
+
+    overflow-x: hidden;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    font-family:
+        "Noto Serif Thai",
+        serif;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.site-navbar {
+
+    background: rgba(255,255,255,.96);
+
+    border-bottom:
+        2px solid var(--blue);
+
+}
+
+
+.brand-logo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+
+}
+
+
+.brand-logo span {
+
+    font-family: Georgia, serif;
+
+    font-size: 2rem;
+
+}
+
+
+.brand-logo small {
+
+    font-size: .55rem;
+
+    letter-spacing: .15em;
+
+    margin-top: 5px;
+
+}
+
+
+.nav-link {
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+    color: var(--dark);
+
+    margin-left: 15px;
+
+}
+
+
+.nav-link:hover {
+
+    color: var(--blue-dark);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+
+    position: relative;
+
+    padding:
+        100px 0
+        120px;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,255,255,.9),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(235,184,220,.35),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #bceef7,
+            #eafcff 55%,
+            #fff2fa
+        );
+
+    border-bottom:
+        1px solid var(--line);
+
+}
+
+
+.hero-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 3%;
+
+    right: 3%;
+
+    height: 4px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            var(--blue-dark) 0 70px,
+            transparent 70px 80px
+        );
+
+}
+
+
+.hero-row {
+
+    min-height: 620px;
+
+}
+
+
+.eyebrow,
+.section-label {
+
+    margin-bottom: 15px;
+
+    color: var(--blue-dark);
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.hero-title {
+
+    font-size:
+        clamp(2.5rem, 5vw, 5rem);
+
+    line-height: 1.2;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-title span {
+
+    display: block;
+
+    color: #087f96;
+
+}
+
+
+.hero-lead {
+
+    font-size: 1.35rem;
+
+    font-weight: 600;
+
+    line-height: 1.8;
+
+}
+
+
+.hero-description {
+
+    color: #60777d;
+
+    line-height: 2;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+}
+
+
+.btn-main {
+
+    color: white;
+
+    background: var(--blue-dark);
+
+    border: 1px solid var(--blue-dark);
+
+    padding:
+        13px 30px;
+
+    border-radius: 0;
+
+}
+
+
+.btn-main:hover {
+
+    color: white;
+
+    background: #087f96;
+
+}
+
+
+.btn-outline-main {
+
+    color: var(--blue-dark);
+
+    border: 1px solid var(--blue-dark);
+
+    padding:
+        13px 30px;
+
+    border-radius: 0;
+
+}
+
+
+.btn-outline-main:hover {
+
+    color: white;
+
+    background: var(--blue-dark);
+
+}
+
+
+/* =========================================================
+   BOOK
+========================================================= */
+
+.book-stage {
+
+    position: relative;
+
+    width: min(450px, 100%);
+
+    margin:
+        0 auto;
+
+    padding:
+        30px 25px 55px;
+
+}
+
+
+.book-circle {
+
+    position: absolute;
+
+    width: 360px;
+
+    height: 360px;
+
+    max-width: 85%;
+
+    max-height: 85%;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border:
+        1px dashed var(--blue-dark);
+
+    background:
+        rgba(255,255,255,.45);
+
+}
+
+
+.book-frame {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 12px;
+
+    background: white;
+
+    border:
+        1px solid var(--line);
+
+    box-shadow:
+        14px 14px 0
+        rgba(232,185,221,.45);
+
+}
+
+
+.book-cover {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+.book-label {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 210px;
+
+    margin:
+        -35px 0 0 -20px;
+
+    padding: 12px 18px;
+
+    background: white;
+
+    border:
+        1px solid var(--blue-dark);
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.book-label strong {
+
+    font-size: .8rem;
+
+    letter-spacing: .12em;
+
+}
+
+
+.book-label span {
+
+    font-size: .65rem;
+
+    color: #789097;
+
+}
+
+
+/* =========================================================
+   TOPICS
+========================================================= */
+
+.topics-section {
+
+    padding:
+        100px 0;
+
+    background: white;
+
+}
+
+
+.topics-box {
+
+    padding:
+        45px;
+
+    border:
+        1px solid var(--blue-dark);
+
+    background:
+        rgba(255,255,255,.95);
+
+    box-shadow:
+        12px 12px 0
+        rgba(88,196,216,.18);
+
+}
+
+
+.topics-box h2 {
+
+    font-size: 2rem;
+
+    line-height: 1.6;
+
+}
+
+
+.topics-box p {
+
+    color: #64777c;
+
+    line-height: 2;
+
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.quote-section {
+
+    padding:
+        90px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eafcff,
+            #fff3fa
+        );
+
+}
+
+
+.quote-paper {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding:
+        60px 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border:
+        1px solid var(--line);
+
+    position: relative;
+
+}
+
+
+.quote-paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border:
+        1px dashed
+        rgba(88,196,216,.35);
+
+    pointer-events: none;
+
+}
+
+
+.quote-flower {
+
+    color: var(--pink);
+
+    font-size: 2rem;
+
+}
+
+
+.quote-text {
+
+    position: relative;
+
+    font-family:
+        "Noto Serif Thai",
+        serif;
+
+    font-size:
+        clamp(1.5rem, 3vw, 2.5rem);
+
+    line-height: 1.8;
+
+}
+
+
+.quote-en {
+
+    font-size: .65rem;
+
+    letter-spacing: .15em;
+
+    color: #789097;
+
+}
+
+
+/* =========================================================
+   GENERAL CONTENT SECTION
+========================================================= */
+
+.content-section {
+
+    position: relative;
+
+    padding:
+        120px 0;
+
+}
+
+
+.section-heading {
+
+    max-width: 850px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size:
+        clamp(2rem, 4vw, 3.5rem);
+
+    line-height: 1.45;
+
+}
+
+
+.heading-description {
+
+    max-width: 700px;
+
+    margin:
+        20px auto 0;
+
+    color: #65787d;
+
+    line-height: 2;
+
+}
+
+
+/* =========================================================
+   SECTION NUMBER
+========================================================= */
+
+.section-number {
+
+    width: 100px;
+
+    height: 100px;
+
+    margin-bottom: -20px;
+
+    margin-left: max(
+        20px,
+        calc((100vw - 1180px) / 2)
+    );
+
+    border-radius: 50%;
+
+    background:
+        var(--blue);
+
+    border:
+        1px solid #268296;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    position: relative;
+
+    z-index: 5;
+
+    box-shadow:
+        0 0 0 7px white;
+
+}
+
+
+.section-number span {
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+}
+
+
+.section-number small {
+
+    font-size: .55rem;
+
+    letter-spacing: .1em;
+
+}
+
+
+.section-number-purple {
+
+    background:
+        var(--purple);
+
+    color: #4d4960;
+
+    border-color:
+        #8b83a7;
+
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #e8faff
+        );
+
+}
+
+
+.story-layout {
+
+    border:
+        1px solid var(--line);
+
+}
+
+
+.story-text-box {
+
+    padding:
+        60px;
+
+    background:
+        #e6f8fc;
+
+}
+
+
+.story-text-box p {
+
+    color: #61767c;
+
+    line-height: 2;
+
+}
+
+
+.story-text-box .lead {
+
+    font-size: 1.2rem;
+
+    color: var(--dark);
+
+}
+
+
+.story-highlight {
+
+    margin-top: 40px;
+
+    padding:
+        25px;
+
+    background: white;
+
+    border:
+        1px dashed var(--blue-dark);
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+}
+
+
+.story-highlight span {
+
+    font-family: Georgia, serif;
+
+    font-size: 4rem;
+
+    color: var(--blue);
+
+    line-height: .7;
+
+}
+
+
+.story-highlight p {
+
+    margin: 0;
+
+    font-family:
+        "Noto Serif Thai",
+        serif;
+
+    font-size: 1.3rem;
+
+    color: var(--dark);
+
+}
+
+
+/* =========================================================
+   STORY VISUAL
+========================================================= */
+
+.story-visual {
+
+    min-height: 100%;
+
+    padding:
+        60px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    background:
+        #ffffff;
+
+    position: relative;
+
+}
+
+
+.station-circle {
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    border:
+        1px dashed var(--blue-dark);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            white,
+            #dff7fb
+        );
+
+}
+
+
+.station-icon {
+
+    font-size: 4rem;
+
+}
+
+
+.station-circle span {
+
+    margin-top: 10px;
+
+    font-size: .7rem;
+
+    letter-spacing: .15em;
+
+    color: var(--blue-dark);
+
+}
+
+
+.visual-note {
+
+    padding:
+        8px 15px;
+
+    border:
+        1px solid var(--line);
+
+    background: white;
+
+    font-size: .7rem;
+
+    letter-spacing: .08em;
+
+}
+
+
+.note-one {
+    color: var(--blue-dark);
+}
+
+
+.note-two {
+    color: #b26ca0;
+}
+
+
+.note-three {
+    color: #8b7a36;
+}
+
+
+/* =========================================================
+   PINK STRIPE
+========================================================= */
+
+.pink-stripe {
+
+    padding:
+        20px 0;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            #e7b7dc 0 10px,
+            #f4d7ed 10px 20px
+        );
+
+    border-top:
+        1px solid var(--blue-dark);
+
+    border-bottom:
+        1px solid var(--blue-dark);
+
+}
+
+
+.stripe-line {
+
+    height: 3px;
+
+    background:
+        rgba(255,255,255,.8);
+
+}
+
+
+/* =========================================================
+   GRID PAPER
+========================================================= */
+
+.grid-paper {
+
+    padding:
+        55px 0;
+
+    background-color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(90,150,160,.10) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(90,150,160,.10) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        20px 20px;
+
+}
+
+
+.grid-paper p {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: .65rem;
+
+    letter-spacing: .2em;
+
+    color: #789097;
+
+}
+
+
+/* =========================================================
+   CHARACTERS
+========================================================= */
+
+.characters-section {
+
+    background:
+        linear-gradient(
+            110deg,
+            #e0f7fb,
+            #ffffff
+        );
+
+}
+
+
+.character-image-frame {
+
+    padding: 15px;
+
+    background: white;
+
+    border:
+        1px dashed var(--blue-dark);
+
+    box-shadow:
+        14px 14px 0
+        rgba(232,185,221,.35);
+
+}
+
+
+.character-list {
+
+    border-top:
+        1px solid var(--line);
+
+}
+
+
+.character-item {
+
+    display: grid;
+
+    grid-template-columns:
+        60px 1fr;
+
+    gap: 20px;
+
+    padding:
+        25px 0;
+
+    border-bottom:
+        1px solid var(--line);
+
+}
+
+
+.character-number {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        var(--blue);
+
+    color: white;
+
+    font-size: .8rem;
+
+    font-weight: 700;
+
+}
+
+
+.character-item h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 1.4rem;
+
+}
+
+
+.character-item p {
+
+    margin: 0;
+
+    color: #64777c;
+
+    line-height: 1.9;
+
+}
+
+
+.train-message {
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: rgba(255,255,255,.65);
+
+    border:
+        1px dashed var(--blue-dark);
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+.train-message span {
+
+    color: var(--blue-dark);
+
+    font-size: 2rem;
+
+}
+
+
+.train-message p {
+
+    margin: 0;
+
+    color: #65787d;
+
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits-section {
+
+    background:
+        #ffffff;
+
+}
+
+
+.benefit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border:
+        1px solid var(--line);
+
+}
+
+
+.benefit-card {
+
+    min-height: 360px;
+
+    padding:
+        40px;
+
+    border-right:
+        1px solid var(--line);
+
+}
+
+
+.benefit-card:last-child {
+
+    border-right: none;
+
+}
+
+
+.benefit-blue {
+
+    background:
+        #e1f8fc;
+
+}
+
+
+.benefit-pink {
+
+    background:
+        #f5d9ee;
+
+}
+
+
+.benefit-cream {
+
+    background:
+        #fff7dc;
+
+}
+
+
+.benefit-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.benefit-number {
+
+    font-size: .7rem;
+
+    letter-spacing: .15em;
+
+    color: #66838a;
+
+}
+
+
+.benefit-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255,255,255,.65);
+
+    font-size: 1.8rem;
+
+}
+
+
+.benefit-card h3 {
+
+    margin-top: 45px;
+
+    margin-bottom: 20px;
+
+    font-size: 1.5rem;
+
+}
+
+
+.benefit-card p {
+
+    color: #60757b;
+
+    line-height: 2;
+
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.summary-section {
+
+    padding:
+        120px 0;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 30%,
+            white,
+            transparent 20%
+        ),
+
+        linear-gradient(
+            135deg,
+            #d8f7fb,
+            #fff0f9
+        );
+
+}
+
+
+.summary-box {
+
+    padding:
+        70px;
+
+    background:
+        rgba(255,255,255,.82);
+
+    border:
+        1px solid var(--line);
+
+    box-shadow:
+        12px 12px 0
+        rgba(232,185,221,.3);
+
+}
+
+
+.summary-box h2 {
+
+    font-size:
+        clamp(2rem, 4vw, 3.5rem);
+
+    line-height: 1.5;
+
+}
+
+
+.summary-box h2 span {
+
+    display: block;
+
+    color: var(--blue-dark);
+
+}
+
+
+.summary-line {
+
+    width: 100px;
+
+    height: 4px;
+
+    margin-top: 30px;
+
+    background: var(--blue);
+
+}
+
+
+.summary-box p {
+
+    color: #60757b;
+
+    line-height: 2;
+
+}
+
+
+.summary-lead {
+
+    font-size: 1.15rem;
+
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final-section {
+
+    padding:
+        110px 0;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        repeating-linear-gradient(
+            -45deg,
+            #53bfd2 0 15px,
+            #58c7d8 15px 30px
+        );
+
+}
+
+
+.final-content {
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+
+.final-content .section-label {
+
+    color: white;
+
+}
+
+
+.final-content h2 {
+
+    font-size:
+        clamp(2.2rem, 5vw, 4rem);
+
+    line-height: 1.5;
+
+}
+
+
+.final-content p:not(.section-label) {
+
+    max-width: 600px;
+
+    margin:
+        25px auto 35px;
+
+    line-height: 2;
+
+    color: rgba(255,255,255,.9);
+
+}
+
+
+.final-button {
+
+    padding:
+        13px 35px;
+
+    border-radius: 0;
+
+    color: var(--blue-dark);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    padding:
+        35px 0;
+
+    background:
+        #279db3;
+
+    color: white;
+
+}
+
+
+.footer-logo {
+
+    font-family: Georgia, serif;
+
+    font-size: 2rem;
+
+}
+
+
+.site-footer small {
+
+    opacity: .8;
+
+    letter-spacing: .08em;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+
+    .hero-section {
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .hero-row {
+
+        min-height: auto;
+
+    }
+
+
+    .book-stage {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .content-section {
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .section-number {
+
+        margin-left: 25px;
+
+    }
+
+
+    .story-text-box {
+
+        padding: 40px 30px;
+
+    }
+
+
+    .benefit-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .benefit-card {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--line);
+
+    }
+
+
+    .benefit-card:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .summary-box {
+
+        padding: 45px 30px;
+
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+
+    .hero-section {
+
+        padding:
+            55px 0 70px;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 2.35rem;
+
+    }
+
+
+    .hero-lead {
+
+        font-size: 1.1rem;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .book-circle {
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+
+    .book-label {
+
+        margin-left: 0;
+
+    }
+
+
+    .topics-section,
+    .quote-section,
+    .content-section,
+    .summary-section {
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .topics-box {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .section-number {
+
+        width: 75px;
+
+        height: 75px;
+
+        margin-left: 20px;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .story-highlight {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .station-circle {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+    .character-item {
+
+        grid-template-columns:
+            45px 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .benefit-card {
+
+        padding: 30px;
+
+        min-height: auto;
+
+    }
+
+
+    .summary-box {
+
+        padding: 35px 25px;
+
+    }
+
+
+    .final-section {
+
+        padding:
+            80px 20px;
+
+    }
+
+}
+/* =========================================================
+   ✨ INTERACTIVE BOOK JOURNEY
+   เพิ่มต่อท้าย style.css
+========================================================= */
+
+
+/* =========================================================
+   01. BOOK FLOATING
+========================================================= */
+
+.book-stage {
+    perspective: 1200px;
+}
+
+.book-frame {
+    position: relative;
+    transform-style: preserve-3d;
+
+    animation:
+        bookFloat 4s ease-in-out infinite;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* หนังสือลอยขึ้นลง */
+
+@keyframes bookFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotateZ(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotateZ(1deg);
+    }
+
+}
+
+
+/* Hover */
+
+.book-stage:hover .book-frame {
+
+    animation-play-state: paused;
+
+    transform:
+        translateY(-12px)
+        rotateY(-8deg)
+        rotateX(4deg)
+        scale(1.03);
+
+    box-shadow:
+        22px 25px 0 rgba(232,185,221,.35),
+        0 25px 45px rgba(38,56,61,.15);
+
+}
+
+
+/* รูปปก */
+
+.book-cover {
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.book-stage:hover .book-cover {
+
+    transform:
+        translateZ(20px);
+
+}
+
+
+/* =========================================================
+   02. วงกลมด้านหลังหมุน
+========================================================= */
+
+.book-circle {
+
+    animation:
+        circleRotate 18s linear infinite;
+
+}
+
+
+@keyframes circleRotate {
+
+    from {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   03. BOOK LABEL ลอยสวนทาง
+========================================================= */
+
+.book-label {
+
+    animation:
+        labelFloat 3s ease-in-out infinite;
+
+}
+
+
+@keyframes labelFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-7px);
+    }
+
+}
+
+
+/* =========================================================
+   04. คลิกหนังสือแล้วเด้ง
+========================================================= */
+
+.book-frame.book-click {
+
+    animation:
+        bookBounce .55s ease;
+
+}
+
+
+@keyframes bookBounce {
+
+    0% {
+        transform:
+            scale(1)
+            rotate(0deg);
+    }
+
+    30% {
+        transform:
+            scale(1.06)
+            rotate(-2deg);
+    }
+
+    55% {
+        transform:
+            scale(.96)
+            rotate(2deg);
+    }
+
+    75% {
+        transform:
+            scale(1.03)
+            rotate(-1deg);
+    }
+
+    100% {
+        transform:
+            scale(1)
+            rotate(0deg);
+    }
+
+}
+
+
+/* =========================================================
+   05. STATION CIRCLE
+========================================================= */
+
+.station-circle {
+
+    animation:
+        stationFloat 4s ease-in-out infinite;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+@keyframes stationFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-12px);
+    }
+
+}
+
+
+.station-circle:hover {
+
+    transform:
+        scale(1.08)
+        rotate(3deg);
+
+    box-shadow:
+        0 20px 40px rgba(21,157,181,.18);
+
+}
+
+
+.station-icon {
+
+    animation:
+        trainBounce 2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes trainBounce {
+
+    0%,
+    100% {
+        transform:
+            translateX(0);
+    }
+
+    50% {
+        transform:
+            translateX(7px);
+    }
+
+}
+
+
+/* =========================================================
+   06. VISUAL NOTE ลอยคนละจังหวะ
+========================================================= */
+
+.note-one {
+
+    animation:
+        noteFloat1 3s ease-in-out infinite;
+
+}
+
+
+.note-two {
+
+    animation:
+        noteFloat2 3.5s ease-in-out infinite;
+
+}
+
+
+.note-three {
+
+    animation:
+        noteFloat3 4s ease-in-out infinite;
+
+}
+
+
+@keyframes noteFloat1 {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0)
+            rotate(-2deg);
+    }
+
+    50% {
+        transform:
+            translate(8px,-8px)
+            rotate(2deg);
+    }
+
+}
+
+
+@keyframes noteFloat2 {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0)
+            rotate(2deg);
+    }
+
+    50% {
+        transform:
+            translate(-10px,-6px)
+            rotate(-2deg);
+    }
+
+}
+
+
+@keyframes noteFloat3 {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0)
+            rotate(-1deg);
+    }
+
+    50% {
+        transform:
+            translate(8px,7px)
+            rotate(2deg);
+    }
+
+}
+
+
+/* =========================================================
+   07. TOPICS CARD
+========================================================= */
+
+.topics-box {
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.topics-box:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        18px 20px 0 rgba(88,196,216,.18),
+        0 20px 40px rgba(38,56,61,.08);
+
+}
+
+
+/* =========================================================
+   08. QUOTE PAPER
+========================================================= */
+
+.quote-paper {
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+
+}
+
+
+.quote-paper:hover {
+
+    transform:
+        rotate(-1deg)
+        translateY(-8px);
+
+    box-shadow:
+        15px 20px 35px rgba(38,56,61,.10);
+
+}
+
+
+.quote-flower {
+
+    display: inline-block;
+
+    animation:
+        flowerSpin 6s linear infinite;
+
+}
+
+
+@keyframes flowerSpin {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   09. CHARACTER IMAGE
+========================================================= */
+
+.character-image-frame {
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+
+}
+
+
+.character-image-frame:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(-1deg);
+
+    box-shadow:
+        20px 25px 0 rgba(232,185,221,.30),
+        0 25px 45px rgba(38,56,61,.10);
+
+}
+
+
+/* =========================================================
+   10. CHARACTER CARD
+========================================================= */
+
+.character-item {
+
+    position: relative;
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        padding-left .35s ease;
+
+    cursor: pointer;
+
+}
+
+
+.character-item:hover {
+
+    transform:
+        translateX(10px);
+
+    background:
+        rgba(255,255,255,.55);
+
+    padding-left:
+        15px;
+
+}
+
+
+/* หมายเลขเด้ง */
+
+.character-number {
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.character-item:hover .character-number {
+
+    transform:
+        scale(1.15)
+        rotate(8deg);
+
+}
+
+
+/* =========================================================
+   11. TRAIN MESSAGE
+========================================================= */
+
+.train-message {
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.train-message:hover {
+
+    transform:
+        translateX(8px);
+
+    box-shadow:
+        8px 8px 0 rgba(88,196,216,.15);
+
+}
+
+
+.train-message span {
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.train-message:hover span {
+
+    transform:
+        translateX(12px);
+
+}
+
+
+/* =========================================================
+   12. BENEFIT CARDS
+========================================================= */
+
+.benefit-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1),
+        box-shadow .45s ease;
+
+}
+
+
+/* เส้นแสงวิ่ง */
+
+.benefit-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        var(--blue-dark);
+
+    transition:
+        left .5s ease;
+
+}
+
+
+.benefit-card:hover::before {
+
+    left: 0;
+
+}
+
+
+.benefit-card:hover {
+
+    transform:
+        translateY(-15px);
+
+    box-shadow:
+        0 25px 40px rgba(38,56,61,.12);
+
+    z-index: 2;
+
+}
+
+
+/* icon เด้ง */
+
+.benefit-icon {
+
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.benefit-card:hover .benefit-icon {
+
+    transform:
+        scale(1.15)
+        rotate(8deg);
+
+}
+
+
+/* หัวข้อ */
+
+.benefit-card h3 {
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.benefit-card:hover h3 {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   13. CLICK CARD EFFECT
+========================================================= */
+
+.benefit-card.card-clicked {
+
+    animation:
+        cardBounce .55s ease;
+
+}
+
+
+@keyframes cardBounce {
+
+    0% {
+        transform:
+            scale(1);
+    }
+
+    30% {
+        transform:
+            scale(1.06)
+            rotate(-1deg);
+    }
+
+    55% {
+        transform:
+            scale(.96)
+            rotate(1deg);
+    }
+
+    80% {
+        transform:
+            scale(1.02);
+    }
+
+    100% {
+        transform:
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   14. SECTION NUMBER
+========================================================= */
+
+.section-number {
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.section-number:hover {
+
+    transform:
+        scale(1.12)
+        rotate(8deg);
+
+}
+
+
+/* =========================================================
+   15. BUTTON
+========================================================= */
+
+.btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 20px rgba(38,56,61,.12);
+
+}
+
+
+.btn:active {
+
+    transform:
+        scale(.95);
+
+}
+
+
+
+
+
+/* =========================================================
+   17. FLOATING DECORATION
+========================================================= */
+
+.hero-section::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 8%;
+
+    top: 25%;
+
+    font-size: 2rem;
+
+    color: rgba(21,157,181,.35);
+
+    animation:
+        sparkleFloat 3s ease-in-out infinite;
+
+}
+
+
+@keyframes sparkleFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: .4;
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotate(180deg);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   18. FINAL SECTION
+========================================================= */
+
+.final-content {
+
+    animation:
+        finalFloat 4s ease-in-out infinite;
+
+}
+
+
+@keyframes finalFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-6px);
+    }
+
+}
+
+
+/* =========================================================
+   19. REDUCED MOTION
+   สำหรับคนที่ไม่ต้องการ animation
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+   Fade In / Fade Out เมื่อเลื่อนขึ้นและลง
+========================================= */
+
+/* สถานะเริ่มต้น: ซ่อนเนื้อหา */
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+    pointer-events: none;
+    will-change: opacity, transform;
+}
+
+/* เฟดเข้าจากด้านล่าง */
+.reveal.reveal-left {
+    transform: translateX(-35px);
+}
+
+/* เฟดเข้าจากด้านขวา */
+.reveal.reveal-right {
+    transform: translateX(35px);
+}
+
+/* เมื่อเข้ามาในหน้าจอ */
+.reveal.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+    pointer-events: auto;
+}
+
+/* ระยะเวลาการปรากฏแบบเหลื่อมกัน */
+.reveal-delay-1 {
+    transition-delay: 0.12s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.24s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.36s;
+}
+
+/* ปิดเอฟเฟกต์สำหรับผู้ที่ตั้งค่าลดการเคลื่อนไหว */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.reveal-left,
+    .reveal.reveal-right,
+    .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        transition-delay: 0s;
+        pointer-events: auto;
+        will-change: auto;
+    }
+}
+
+.benefit-icon i {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.benefit-icon {
+    flex-shrink: 0;
+    transition:
+        transform 0.45s cubic-bezier(.2, .8, .2, 1);
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.15) rotate(8deg);
+}
+/* ข้อความประกอบส่วน SEO */
+.seo-section-intro {
+  max-width: 760px;
+  margin: 16px 0 24px;
+  color: var(--dark, #26383d);
+  font-family: "Noto Sans Thai", sans-serif;
+  line-height: 1.9;
+}
+
+/* ส่วน AEO: กลุ่มผู้อ่าน */
+.aeo-readers-section {
+  padding: clamp(56px, 7vw, 100px) 0;
+  background: linear-gradient(
+    135deg,
+    #eefcfe 0%,
+    #ffffff 55%,
+    #fff4fb 100%
+  );
+}
+
+.aeo-readers-section,
+.aeo-basics-section {
+  color: var(--dark, #26383d);
+  font-family: "Noto Sans Thai", sans-serif;
+  scroll-margin-top: 90px;
+}
+
+.aeo-readers-section .section-heading {
+  max-width: 820px;
+  margin-bottom: 36px;
+}
+
+.aeo-readers-section h2,
+.aeo-basics-section h2 {
+  margin: 0 0 20px;
+  font-family: "Noto Serif Thai", serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.aeo-lead {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.aeo-reader-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid rgba(38, 56, 61, 0.25);
+  box-shadow: 6px 6px 0 rgba(88, 196, 216, 0.1);
+}
+
+.aeo-reader-card {
+  min-width: 0;
+  padding: clamp(24px, 3vw, 36px);
+  background: #e5f8fc;
+}
+
+.aeo-reader-card + .aeo-reader-card {
+  border-left: 1px solid rgba(38, 56, 61, 0.25);
+}
+
+.aeo-reader-card:nth-child(2) {
+  background: #f4dced;
+}
+
+.aeo-reader-card:nth-child(3) {
+  background: var(--cream, #fff9e9);
+}
+
+.aeo-reader-card h3 {
+  margin: 18px 0 14px;
+  font-family: "Noto Serif Thai", serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.aeo-reader-card p:not(.section-label) {
+  margin: 0;
+  line-height: 1.9;
+}
+
+/* ส่วน AEO: พื้นฐานก่อนอ่าน */
+.aeo-basics-section {
+  padding: clamp(40px, 6vw, 80px) 0;
+  background: #ffffff;
+}
+
+.aeo-basics-box {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid rgba(21, 157, 181, 0.5);
+  background: linear-gradient(135deg, #f2fcfe, #ffffff);
+  box-shadow: 6px 6px 0 rgba(232, 185, 221, 0.25);
+}
+
+.aeo-basics-copy p {
+  margin: 0 0 16px;
+  line-height: 1.9;
+}
+
+.aeo-basics-copy .aeo-note {
+  margin: 24px 0 0;
+  padding: 16px 20px;
+  border: 1px dashed var(--blue-dark, #159db5);
+  background: #ffffff;
+}
+
+/* ป้ายภาษาอังกฤษของส่วนใหม่ */
+.aeo-readers-section .section-label,
+.aeo-basics-section .section-label {
+  margin-bottom: 12px;
+  color: var(--dark, #26383d);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+/* หน้าจอขนาดเล็ก */
+@media (max-width: 991.98px) {
+  .aeo-reader-grid,
+  .aeo-basics-box {
+    grid-template-columns: 1fr;
+  }
+
+  .aeo-reader-card + .aeo-reader-card {
+    border-left: 0;
+    border-top: 1px solid rgba(38, 56, 61, 0.25);
+  }
+}
